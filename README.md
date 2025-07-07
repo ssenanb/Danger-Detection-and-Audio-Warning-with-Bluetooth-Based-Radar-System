@@ -1,4 +1,4 @@
-# Danger-Detection-and-Audio-Warning-with-Bluetooth-Based-Radar-System
+# Object Detection and Audio Warning System with Bluetooth Controlled Pseudo-Radar
 
 # Project Description
 
