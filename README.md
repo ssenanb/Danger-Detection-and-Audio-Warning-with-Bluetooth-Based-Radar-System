@@ -13,6 +13,8 @@ The system is based on a simple radar simulation. The easured distance values ar
 
 If the measured distance falls a below certain threshold, the buzzer on the STM32 is activated. The system also supports remote control. When an `OFF` command is sent from the Bluetooth Terminal, the ESP32 forwards this command to the STM32 via UART and the buzzer is deactivated. 
 
+NOTE : I used a median filter for the HC-SR04 sensor to reduce measurement noise. To sort the sensor values, I implemented the selection sort algorithm.
+
 Figure 1 : System Ovreview
 
 <img src="https://github.com/ssenanb/Danger-Detection-and-Audio-Warning-with-Bluetooth-Based-Radar-System/blob/main/system_overview.jpeg" alt="System Overview" width="500"/>
@@ -51,9 +53,9 @@ PA1 -> TIM2_CH2 -> Servo Motor
 
 PA8 -> TIM1_CH1 ->  HC-SR04 - Echo Pin (with Input Capture PWM Mode and Interrupt)
 
-PA9 -> USART1_TX
+PA9 -> USART1_TX (with Interrupt)
 
-PA10 -> USART1_RX
+PA10 -> USART1_RX (with Interrupt)
 
 PC8 -> GPIO_Output -> Active Buzzer
 
