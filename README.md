@@ -1,4 +1,4 @@
-# Object Detection and Audio Warning System with Bluetooth Controlled Pseudo-Radar
+# Audio Warning System with Bluetooth Controlled Pseudo-Radar
 
 # Project Description
 
